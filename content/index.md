@@ -1,18 +1,17 @@
 ---
-title: Statinamic default boilerplate
+title: Hyperion.ai
 ---
 
-> Hi there.
+## How it Works
 
-Before having fun with Statinamic, be sure to read (or at least pretend to)
-the documentation :
+- Fill out a survey about your current health and health-related goals.
+> subtext
 
-* [Setup](http://moox.io/statinamic/docs/setup/)
-* [Usage](http://moox.io/statinamic/docs/usage/)
-* [FAQ](http://moox.io/statinamic/docs/faq/)
-
-Built with
-<a href="https://facebook.github.io/react/">
-  <img alt="" src="assets/react.svg" width="16" height="16" />
-  React
-</a>.
+- Download the Hyperion.ai app on your favorite platform's app store and
+optionally, add your desired health tracking integrations (e.g. HealthKit,
+Fitbit, Jawbone).
+- You will receive a month's supply of the initial vitamin formula.
+- Depending on your preferences&mdash;ranging from nightly to weekly&mdash;answer
+the prompts from the Hyperion.ai app.
+- Hyperion.ai will automatically analyze your results and adjust the vitamin
+formula accordingly before sending out another month's supply.

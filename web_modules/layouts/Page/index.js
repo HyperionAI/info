@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import invariant from 'invariant';
 
+import styles from './index.css';
  // eslint-disable-next-line react/prefer-stateless-function
 export default class Page extends Component {
 
@@ -54,18 +55,21 @@ export default class Page extends Component {
           title={ metaTitle }
           meta={ meta }
         />
+        <div className = { styles.background }></div>
+        <div className = { styles.container }>
 
-        {
-          head.title &&
-          <h1>{ head.title }</h1>
-        }
-        {
-          body &&
-          <div
-            dangerouslySetInnerHTML={ { __html: body } }
-          />
-        }
-        { this.props.children }
+          {
+            head.title &&
+            <h1>{ head.title }</h1>
+          }
+          {
+            body &&
+            <div
+              dangerouslySetInnerHTML={ { __html: body } }
+            />
+          }
+          { this.props.children }
+        </div>
       </div>
     );
   }

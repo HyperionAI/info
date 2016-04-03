@@ -22,19 +22,32 @@ export default class Header extends Component {
             </Link>
           </div>
           <div className={ styles.navPart2 }>
+            <Link className= {styles.link } to="/experience">
+              { "Experience" }
+            </Link>
+            <Link className= {styles.link } to="/products">
+              { "Products" }
+            </Link>
+            <Link className= {styles.link } to="/integrations">
+              { "Integrations" }
+            </Link>
+            <Link className= {styles.link } to="/pricing">
+              { "Pricing" }
+            </Link>
+            <Link className= {styles.link } to="/products">
+              { "Store" }
+            </Link>
             <a
               href="https://twitter.com/Statinamic"
               className={ styles.link }
             >
               <SVG svg={ twitterSVG } />
-              { "Twitter" }
             </a>
             <a
               href="https://github.com/MoOx/statinamic"
               className={ styles.link }
             >
               <SVG svg={ gitHubSVG } />
-              { "GitHub" }
             </a>
           </div>
         </nav>
