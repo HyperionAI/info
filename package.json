@@ -9,7 +9,9 @@
     "start": "statinamic start",
     "build": "statinamic build",
     "pretest": "npm run lint",
-    "test": "npm run build"
+    "test": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "babel-node scripts/deploy"
   },
   "statinamic": {
     "CNAME": false
