@@ -1,13 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 import invariant from 'invariant';
+import ProductLight from '../../components/Product/ProductLight';
 
 import Header from '../../components/Header';
 
-import styles from './index.css';
- // eslint-disable-next-line react/prefer-stateless-function
-export default class Page extends Component {
-
+// eslint-disable-next-line react/prefer-stateless-function
+export default class StandardPlan extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     __filename: PropTypes.string.isRequired,
@@ -16,20 +15,11 @@ export default class Page extends Component {
     body: PropTypes.string.isRequired,
   };
 
-  static contextTypes = {
-    metadata: PropTypes.object.isRequired,
-  };
-
   render() {
-    const {
-      pkg,
-    } = this.context.metadata;
-
     const {
       __filename,
       __url,
       head,
-      body,
     } = this.props;
 
     invariant(
@@ -46,33 +36,18 @@ export default class Page extends Component {
       { property: 'og:description', content: head.description },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:title', content: metaTitle },
-      { name: 'twitter:creator', content: `@${pkg.twitter}` },
+      { name: 'twitter:creator', content: `@${head.twitter}` },
       { name: 'twitter:description', content: head.description },
       { name: 'description', content: head.description },
     ];
-
     return (
       <div>
-        <Helmet
-          title={ metaTitle }
-          meta={ meta }
-        />
-        <Header />
-        <div className = { styles.background }></div>
-        <div className = { styles.container }>
-
-          {
-            head.title &&
-            <h1>{ head.title }</h1>
-          }
-          {
-            body &&
-            <div
-              dangerouslySetInnerHTML={ { __html: body } }
-            />
-          }
-          { this.props.children }
-        </div>
+      <Helmet
+        title= { metaTitle }
+        meta = { meta }
+      />
+      <Header />
+      <ProductLight />
       </div>
     );
   }

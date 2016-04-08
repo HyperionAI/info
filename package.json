@@ -78,5 +78,8 @@
     "stylelint-config-standard": "^4.0.1",
     "webpack": "^1.12.1",
     "whatwg-fetch": "^0.11.0"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.1"
   }
 }

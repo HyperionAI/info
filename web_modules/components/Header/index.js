@@ -3,8 +3,8 @@ import { Link } from 'react-router';
 
 import styles from './index.css';
 import SVG from 'react-svg-inline';
-import twitterSVG from '../icons/iconmonstr-twitter-1.svg';
-import gitHubSVG from '../icons/iconmonstr-github-1.svg';
+import twitterSVG from '../../icons/iconmonstr-twitter-1.svg';
+import gitHubSVG from '../../icons/iconmonstr-github-1.svg';
 
  // eslint-disable-next-line react/prefer-stateless-function
 export default class Header extends Component {

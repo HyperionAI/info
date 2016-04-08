@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Helmet from 'react-helmet';
 
-import Header from '../Header';
-import Footer from '../Footer';
-
 import styles from './index.css';
 
  // eslint-disable-next-line react/prefer-stateless-function
@@ -30,11 +27,7 @@ export default class Layout extends Component {
             { name: 'twitter:site', content: `@${pkg.twitter}` },
           ] }
         />
-        <Header />
-        <div className={ styles.content }>
-          { this.props.children }
-        </div>
-        <Footer />
+        { this.props.children }
       </div>
     );
   }
