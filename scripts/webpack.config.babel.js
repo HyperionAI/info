@@ -32,7 +32,15 @@ export default ({ config, pkg }) => ({
         },
       },
       {
-        test: /\.css$/,
+        test: /\.global.css$/,
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+        ),
+      },
+      {
+        test: /^((?!\.global).)*\.css$/,
         loader: ExtractTextPlugin.extract(
           'style-loader',
           'css-loader' + (
